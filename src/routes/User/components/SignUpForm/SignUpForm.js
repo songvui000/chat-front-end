@@ -1,6 +1,6 @@
 import React from 'react'
 import cookies from 'browser-cookies'
-export default class SignInForm extends React.Component {
+export default class SignUpForm extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -13,7 +13,7 @@ export default class SignInForm extends React.Component {
   submitForm (e) {
     e.preventDefault()
     let { email, password } = this.state
-    fetch('http://localhost:3300/api/auth/sign_in', {
+    fetch('http://localhost:3300/api/auth', {
       headers: {
         'Content-Type': 'application/json',
         credentials: 'same-origin'
@@ -38,6 +38,7 @@ export default class SignInForm extends React.Component {
   render () {
     return (
       <div className='container'>
+        <h3>Sign up</h3>
         <form>
           <div className='form-group'>
             <label className='label'>email</label>
@@ -47,7 +48,7 @@ export default class SignInForm extends React.Component {
             <label className='label'>password</label>
             <input type='password' name='password' className='form-control' onBlur={this.saveData} />
           </div>
-          <input type='submit' value='Sign in' className='btn btn-primary' onClick={this.submitForm} />
+          <input type='submit' value='Sign up' className='btn btn-primary' onClick={this.submitForm} />
         </form>
       </div>
     )

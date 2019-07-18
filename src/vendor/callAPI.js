@@ -14,10 +14,11 @@ const config = () => {
 export const callAPIget = (url, data) => {
   let myHeader = config().headers
   myHeader['Content-Type'] = 'application/json'
-  fetch(url, {
-    ...myHeader,
+  return fetch(`${API_ROOT}/${url}`, {
+    headers: myHeader,
     body: data
   })
+  .then(response => response.json())
 }
 
 export function callAPIpost (url, data = '') {

@@ -1,14 +1,15 @@
-import React from 'react';
-import './App.css';
+import React from 'react'
+import './App.css'
 import ChatBox from './components/ChatBox'
-import SignInForm from './components/SignInForm'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import User from './routes/User'
 
 function App() {
   return (
-    <React.Fragment>
-      <ChatBox />
-      <SignInForm />
-    </React.Fragment>
+    <Router>
+      <Route path='/chat' component={ChatBox} />
+      <Route path='/users' component={User} />
+    </Router>
   );
 }
 
