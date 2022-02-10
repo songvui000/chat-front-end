@@ -8,7 +8,7 @@
     "bootstrap": "^4.3.1",
     "browser-cookies": "^1.2.0",
     "lodash": "^4.17.14",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "react": "^16.8.6",
     "react-bootstrap": "^1.0.0-beta.9",
     "react-dom": "^16.8.6",
